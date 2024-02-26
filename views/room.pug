@@ -1,0 +1,13 @@
+extends layout 
+block content 
+    h2 Room Detail 
+    p #{room.number}
+
+    h3 Booking History 
+    if room.bookings.length 
+      ol 
+        each booking in room.bookings 
+        li From #{booking.number}
+
+    else 
+      p No bookings

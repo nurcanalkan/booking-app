@@ -1,0 +1,9 @@
+extends layout 
+block content 
+  h2 Rooms
+  p They are #{rooms.length} rooms waiting.
+
+  ol 
+    each room in rooms 
+      li 
+         a(href=`/rooms/${room.id}`) #{room.number}
